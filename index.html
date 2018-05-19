@@ -16,7 +16,7 @@
 
       <p>Page One</p>
 
-      <ons-button id="push-button">About Us</ons-button>
+      <ons-button id="about-button">About Us</ons-button>
     </ons-page>
   </template>
 
@@ -33,5 +33,18 @@
 	  </code>
     </ons-page>
   </template>
+  <script>
+	  document.addEventListener('init', function(event) {
+	    var page = event.target;
+
+	    if (page.id === 'index') {
+	      page.querySelector('#about-button').onclick = function() {
+	        document.querySelector('#myNavigator').pushPage('about.html', {data: {title: 'About Us'}});
+	      };
+	    } else if (page.id === 'about') {
+	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+	    }
+	  });
+  </script>
 </body>
 </html>
