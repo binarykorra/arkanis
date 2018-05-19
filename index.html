@@ -53,6 +53,9 @@
 	      page.querySelector('#about-button').onclick = function() {
 	        document.querySelector('#myNavigator').pushPage('about.html', {data: {title: 'About Us'}});
 	      };
+	      page.querySelector('#openmemo-button').onclick = function() {
+	        document.querySelector('#myNavigator').pushPage('openmemo.html', {data: {title: 'Open Memo'}});
+	      };
 	    } else if (page.id === 'about') {
 	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
 	    } else if (page.id === 'openmemo') {
