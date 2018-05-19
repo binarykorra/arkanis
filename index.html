@@ -11,12 +11,13 @@
   <template id="index.html">
     <ons-page id="index">
       <ons-toolbar>
-        <div class="center">Page One</div>
+        <div class="center">Homepage</div>
       </ons-toolbar>
 
-      <p>Page One</p>
+      <p>Homepage Lists</p>
 
       <ons-button id="about-button">About Us</ons-button>
+      <ons-button id="openmemo-button">Open Memo</ons-button>
     </ons-page>
   </template>
 
@@ -33,6 +34,17 @@
 	  </code>
     </ons-page>
   </template>
+  <template id="openmemo.html">
+    <ons-page id="openmemo">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>An Open Memo for Skids</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+	  <p>
+	  	<h2>This Open Memo is for Skid Hackers out there, Willing to Learn my Reverse Engineering Tricks. I'm gonna admit, I was once a Skid Hackers, that is very much willing to learn the do's and dont's of Reverse Engineering. Before that, I once tamed myself to learn into my Handheld Console Hacking which is called PSP Custom Firmware modding and CFW Cook Books. I was so amazed at first, And excited of course, The first step I got into modding was a Pandora Box PSP Mod Hardware, With builtin Charger and Custom Software embedded into it.</h2>
+	  </p>
+    </ons-page>
+  </template>
   <script>
 	  document.addEventListener('init', function(event) {
 	    var page = event.target;
@@ -43,7 +55,9 @@
 	      };
 	    } else if (page.id === 'about') {
 	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
-	    }
+	    } else if (page.id === 'openmemo') {
+	      page.querySelector('#openmemo-button').onclick = function() {
+	        document.querySelector('#myNavigator').pushPage('openmemo.html', {data: {title: 'About Us'}});
 	  });
   </script>
 </body>
