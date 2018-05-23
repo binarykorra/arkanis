@@ -140,6 +140,7 @@
 	      page.querySelector('#ioschecker-button').onclick = function() {
   	        document.querySelector('#voyager').pushPage('ioschecker.pkg', {data: {title: 'DeOS Checker'}});
 		ons.notification.alert(iOSversion());
+		page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
 	      };
 	    } else if (page.id === 'about') {
 	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
