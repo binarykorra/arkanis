@@ -18,6 +18,7 @@
 
       <ons-button id="about-button">About Us</ons-button>
       <ons-button id="openmemo-button">Open Memo</ons-button>
+      <ons-button id="ipainstaller-button">Releases</ons-button>
     </ons-page>
   </template>
 
@@ -61,6 +62,22 @@
 	  </p>
     </ons-page>
   </template>
+  <template id="ipainstaller.html">
+    <ons-page id="ipainstaller">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>iCloud Cloud-based IPA Installer</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+	  <p>
+	  	<h2>Release Dates:</h2>
+		<code>
+			December 1st of 2018, till January 30th of 2019.
+			For the Exploit to be fully functional, Just give me ample time.
+			To develop its very core.
+		</code>
+	  </p>
+    </ons-page>
+  </template>
   <script>
 	  document.addEventListener('init', function(event) {
 	    var page = event.target;
@@ -71,10 +88,14 @@
 	      };
 	      page.querySelector('#openmemo-button').onclick = function() {
 	        document.querySelector('#myNavigator').pushPage('openmemo.html', {data: {title: 'Open Memo'}});
+  	      page.querySelector('#ipainstaller-button').onclick = function() {
+  	        document.querySelector('#myNavigator').pushPage('ipainstaller.html', {data: {title: 'Open Memo'}});
 	      };
 	    } else if (page.id === 'about') {
 	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
 	    } else if (page.id === 'openmemo') {
+  	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+	    } else if (page.id === 'ipainstaller') {
   	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
 	    }
 	  });
