@@ -6,10 +6,10 @@
 	<script src="js/onsenui.min.js"></script>
 </head>
 <body>
-  <ons-navigator swipeable id="voyager" page="index.html"></ons-navigator>
+  <ons-navigator swipeable id="voyager" page="index.pkg"></ons-navigator>
 
-  <template id="index.html">
-    <ons-page id="index">
+  <template id="index.pkg">
+    <ons-page id="voyage">
       <ons-toolbar>
         <div class="center">Arkanis Voyage</div>
       </ons-toolbar>
@@ -89,7 +89,7 @@
 	  document.addEventListener('init', function(event) {
 	    var page = event.target;
 
-	    if (page.id === 'index') {
+	    if (page.id === 'voyage') {
 	      page.querySelector('#about-button').onclick = function() {
 	        document.querySelector('#voyager').pushPage('about.pkg', {data: {title: 'About Us'}});
 			ons.notification.alert('Welcome to Arkanis, Guest!');
