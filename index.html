@@ -9,7 +9,7 @@
 	<script src="js/onsenui.min.js"></script>
 </head>
 <body>
-  <ons-navigator swipeable id="myNavigator" page="index.html"></ons-navigator>
+  <ons-navigator swipeable id="voyager" page="index.pkg"></ons-navigator>
 
   <template id="index">
     <ons-page id="index.pkg">
@@ -94,16 +94,16 @@
 
 	    if (page.id === 'index') {
 	      page.querySelector('#about-button').onclick = function() {
-	        document.querySelector('#myNavigator').pushPage('about.pkg', {data: {title: 'About Us'}});
+	        document.querySelector('#voyager').pushPage('about.pkg', {data: {title: 'About Us'}});
 			ons.notification.alert('Welcome to Arkanis, Guest!');
 	      };
 	      
 	      page.querySelector('#openmemo-button').onclick = function() {
-	        document.querySelector('#myNavigator').pushPage('about.pkg', {data: {title: 'Open Memo'}});
+	        document.querySelector('#voyager').pushPage('about.pkg', {data: {title: 'Open Memo'}});
 	      };
 		  
   	      page.querySelector('#ipainstaller-button').onclick = function() {
-  	        document.querySelector('#myNavigator').pushPage('ipainstaller.pkg', {data: {title: 'Release Dates'}});
+  	        document.querySelector('#voyager').pushPage('ipainstaller.pkg', {data: {title: 'Release Dates'}});
 	      };
 	    } else if (page.id === 'about') {
 	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
