@@ -36,6 +36,8 @@
       <ons-button style="Margin:1%;Display:Inline-Block;"id="openmemo-button">Open Memo</ons-button>
       <br/>
 	  <ons-button style="Margin:1%;Display:Inline-Block;" id="ipainstaller-button">Releases</ons-button>
+      <br/>
+	  <ons-button style="Margin:1%;Display:Inline-Block;" id="ioschecker-button">Check iOS Version</ons-button>
     </ons-page>
   </template>
 
@@ -100,6 +102,26 @@
 	  </p>
     </ons-page>
   </template>
+  <template id="ioschecker.pkg">
+    <ons-page id="ioschecker">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>iCloud Cloud-based IPA Installer</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+	  <p>
+	  	<p><h2>Release Dates:</h2></p>
+	  	<code>
+	 	<div bg>
+			<pre>
+			December 1st of 2018, till January 30th of 2019.
+			For the Exploit to be fully functional, Just give me ample time.
+			To develop its very core and somehow move as functional.
+			</pre>
+  		</div>
+		</code>
+	  </p>
+    </ons-page>
+  </template>
   <script>
 	  document.addEventListener('init', function(event) {
 	    var page = event.target;
@@ -115,6 +137,10 @@
 		  
   	      page.querySelector('#ipainstaller-button').onclick = function() {
   	        document.querySelector('#voyager').pushPage('ipainstaller.pkg', {data: {title: 'Release Dates'}});
+	      };
+		    
+	      page.querySelector('#ioschecker-button').onclick = function() {
+  	        document.querySelector('#voyager').pushPage('ioschecker.pkg', {data: {title: 'DeOS Checker'}});
 		ons.notification.alert(iOSversion());
 	      };
 	    } else if (page.id === 'about') {
@@ -122,6 +148,8 @@
 	    } else if (page.id === 'openmemo') {
   	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
 	    } else if (page.id === 'ipainstaller') {
+  	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+	    } else if (page.id === 'ioschecker') {
   	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
 	    }
 	  });
