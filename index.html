@@ -44,10 +44,6 @@
 			But also the other way around to conduct intimate research protocols.
 		</pre>
 	  </code>
-	  <hr/>
-	  <code>
-	  	<ons-button onclick="ons.notification.alert('Break the Code, Break the Rules, But if you are Breaking the Laws, Then you are not a Code Breaker.')">Message From Decoded</ons-button>
-	  </code>
     </ons-page>
   </template>
   <template id="openmemo.pkg">
@@ -89,6 +85,7 @@
 	    if (page.id === 'index') {
 	      page.querySelector('#about-button').onclick = function() {
 	        document.querySelector('#myNavigator').pushPage('about.pkg', {data: {title: 'About Us'}});
+			ons.notification.alert('Welcome to Arkanis, Guest!');
 	      };
 	      
 	      page.querySelector('#openmemo-button').onclick = function() {
