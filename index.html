@@ -22,7 +22,7 @@
     </ons-page>
   </template>
 
-  <template id="about.html">
+  <template id="about.pkg">
     <ons-page id="about">
       <ons-toolbar>
         <div class="left"><ons-back-button>Home</ons-back-button></div>
@@ -48,7 +48,7 @@
 	  </code>
     </ons-page>
   </template>
-  <template id="openmemo.html">
+  <template id="openmemo.pkg">
     <ons-page id="openmemo">
       <ons-toolbar>
         <div class="left"><ons-back-button>An Open Memo for Skids</ons-back-button></div>
@@ -62,7 +62,7 @@
 	  </p>
     </ons-page>
   </template>
-  <template id="ipainstaller.html">
+  <template id="ipainstaller.pkg">
     <ons-page id="ipainstaller">
       <ons-toolbar>
         <div class="left"><ons-back-button>iCloud Cloud-based IPA Installer</ons-back-button></div>
@@ -84,12 +84,12 @@
 
 	    if (page.id === 'index') {
 	      page.querySelector('#about-button').onclick = function() {
-	        document.querySelector('#myNavigator').pushPage('about.html', {data: {title: 'About Us'}});
+	        document.querySelector('#myNavigator').pushPage('about.pkg', {data: {title: 'About Us'}});
 	      };
 	      page.querySelector('#openmemo-button').onclick = function() {
-	        document.querySelector('#myNavigator').pushPage('openmemo.html', {data: {title: 'Open Memo'}});
+	        document.querySelector('#myNavigator').pushPage('openmemo.pkg', {data: {title: 'Open Memo'}});
   	      page.querySelector('#ipainstaller-button').onclick = function() {
-  	        document.querySelector('#myNavigator').pushPage('ipainstaller.html', {data: {title: 'Open Memo'}});
+  	        document.querySelector('#myNavigator').pushPage('ipainstaller.pkg', {data: {title: 'Release Dates'}});
 	      };
 	    } else if (page.id === 'about') {
 	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
