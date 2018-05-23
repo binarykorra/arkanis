@@ -69,11 +69,13 @@
         <div class="center"></div>
       </ons-toolbar>
 	  <p>
-	  	<h2>Release Dates:</h2>
-		<code>
+	  	<p><h2>Release Dates:</h2></p>
+	  	<code>
+			<pre>
 			December 1st of 2018, till January 30th of 2019.
 			For the Exploit to be fully functional, Just give me ample time.
-			To develop its very core.
+			To develop its very core and somehow move as functional.
+			</pre>
 		</code>
 	  </p>
     </ons-page>
@@ -86,9 +88,11 @@
 	      page.querySelector('#about-button').onclick = function() {
 	        document.querySelector('#myNavigator').pushPage('about.pkg', {data: {title: 'About Us'}});
 	      };
+	      
 	      page.querySelector('#openmemo-button').onclick = function() {
-	        document.querySelector('#myNavigator').pushPage('openmemo.pkg', {data: {title: 'Open Memo'}});
-		  };
+	        document.querySelector('#myNavigator').pushPage('about.pkg', {data: {title: 'Open Memo'}});
+	      };
+		  
   	      page.querySelector('#ipainstaller-button').onclick = function() {
   	        document.querySelector('#myNavigator').pushPage('ipainstaller.pkg', {data: {title: 'Release Dates'}});
 	      };
