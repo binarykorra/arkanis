@@ -6,13 +6,15 @@
 	<script src="js/onsenui.min.js"></script>
 	<script>
 		function checkVersion() {
-		    var agent = window.navigator.userAgent,
+		    var agent = window.navigator.userAgent, z,
 			start = agent.indexOf( 'OS ' );
 
 		    if( ( agent.indexOf( 'iPhone' ) > -1 || agent.indexOf( 'iPad' ) > -1 ) && start > -1 ){
-			return window.Number( agent.substr( start + 3, 3 ).replace( '_', '.' ) );
+			z = window.Number( agent.substr( start + 3, 3 ).replace( '_', '.' ) );
+		    }else{
+		    	z = agent;
 		    }
-		    return 0;
+		    return (z);
 		}
 	</script>
 </head>
