@@ -38,6 +38,8 @@
 	  <ons-button style="Text-Align:Center;Margin:1%;Width:98%;Display:Inline-Block;" id="ipainstaller-button">Releases</ons-button>
       <br/>
 	  <ons-button style="Text-Align:Center;Margin:1%;Width:98%;Display:Inline-Block;" id="ioschecker-button">Check iOS</ons-button>
+      <br/>
+	  <ons-button style="Text-Align:Center;Margin:1%;Width:98%;Display:Inline-Block;" id="jailbreak-button">Download Jailbreak</ons-button>
     </ons-page>
   </template>
 
@@ -118,6 +120,24 @@
 	  </p>
     </ons-page>
   </template>
+  <template id="jailbreak.pkg">
+    <ons-page id="jailbreak">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Home</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+	  <p>
+	  	<p><h2>iOS 9.3.5: Jailbreak Tools</h2></p>
+	  	<code>
+	 	<div bg>
+			<pre>
+				This page is reserved for checking Mobile DNS Hacking iOS Checker.
+			</pre>
+  		</div>
+		</code>
+	  </p>
+    </ons-page>
+  </template>
   <script>
 	  document.addEventListener('init', function(event) {
 	    var page = event.target;
@@ -139,6 +159,9 @@
   	        document.querySelector('#voyager').pushPage('ioschecker.pkg', {data: {title: 'iOS Version'}});
 		ons.notification.alert(iOSversion());
 	      };
+	      page.querySelector('#jailbreak-button').onclick = function() {
+  	        document.querySelector('#voyager').pushPage('jailbreak.pkg', {data: {title: 'Jailbreak for iOS 9.3.5'}});
+	      };
 	    } else if (page.id === 'about') {
 	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
 	    } else if (page.id === 'openmemo') {
@@ -146,6 +169,8 @@
 	    } else if (page.id === 'ipainstaller') {
   	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
 	    } else if (page.id === 'ioschecker') {
+  	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+	    } else if (page.id === 'jailbreak') {
   	      page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
 	    }
 	  });
